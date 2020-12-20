@@ -55,23 +55,20 @@ class Point:
             dy2 = other._y ** 2
             dist2 = sqrt(dx2 + dy2)
             return dist1 > dist2
-        return NotImplemented 
+        return NotImplemented
+
+    def set_x(self,x):
+        self._x = x
+
+    def get_x(self):
+        return self._x 
 
 if __name__ == '__main__':
     # 2. декларация на променлива от типа
     # p1 - обект, Point - клас    
     p1 = Point(7, 4)
-    p2 = Point(7, 4)
+    p2 = Point(17, 14)
 
-    if p2 == p1:
-        print(f'{p2} == {p1}')
-    else:
-        print(f'{p2} != {p1}')
-    # elif p2 == p1:
-    #     pass
-    p = p2
+    p1.set_x(10)
 
-    if p2 == p:
-        print(f'{p2} == {p}')
-    else:
-        print(f'{p2} != {p}')
+    print(f'x={p1.get_x()}')    
